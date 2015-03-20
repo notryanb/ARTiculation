@@ -1,1 +1,31 @@
-Welcome to the MVC Skeleton.
+<!doctype html>
+<html>
+  <header>
+    <title>ARTiculation</title>
+  </header>
+  <section class="photo_stream">
+    <ul>
+      <ul>
+      <% pictures.each do |picture| %>
+      <% picture.sub!(/public\//, '')%>
+      <li>
+        <img src="<%= "../#{picture}" %>"/>
+      </li>
+      <%end%>
+    </ul>
+  </section>
+
+  <section class="tag_stream">
+    <ul>
+      <% tags.each do |tag| %>
+      <li><%=tag.title%></li>
+      <%end%>
+    </ul>
+
+
+
+  </section>
+
+</html>
+
+

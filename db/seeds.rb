@@ -26,10 +26,10 @@ natalia = User.create(email:"natalia@gmail.com",
             handle: "natawesome",
             bio: "Awesome 24/7, yo!")
 
-photo1 = Photo.create(url: File.join('public', 'img', '1.jpg'), user: kiran)
-photo2 = Photo.create(url: File.join('public', 'img', '2.jpg'), user: ryan)
-photo3 = Photo.create(url: File.join('public', 'img', '3.jpg'), user: angel)
-photo4 = Photo.create(url: File.join('public', 'img', '4.jpg'), user: natalia)
+photo1 = Photo.create(url: File.join('img', '1.jpg'), user: kiran)
+photo2 = Photo.create(url: File.join('img', '2.jpg'), user: ryan)
+photo3 = Photo.create(url: File.join('img', '3.jpg'), user: angel)
+photo4 = Photo.create(url: File.join('img', '4.jpg'), user: natalia)
 
 
 street = Tag.create(title: "Street art")
