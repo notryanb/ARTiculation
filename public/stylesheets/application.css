@@ -1,0 +1,11 @@
+.login {
+  display: none;
+  position: absolute;
+  left: 1300px;
+}
+
+.signup {
+  display: none;
+  position: absolute;
+  left: 1300px;
+}

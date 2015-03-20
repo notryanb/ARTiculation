@@ -1,8 +1,34 @@
-<!-- <div>
-<li class="login_button"><a>Login</a></li>
-<li class="signup_button"><a>SignUp</a></li>
-</div> -->
+<div class="login">
+  <% if session[:message] %>
+    <%= session[:message]%>
+    <% session[:message].clear %>
+  <% end %>
 
+  <form action='/authentication/login' method='post'>
+    <br>
+    <br>
+    <br>
+    <br>
+    <input type='text' name='handle' placeholder='HANDLE'/><br>
+    <input type='password' name='password' placeholder='PASSWORD'/><br>
+    <input class="btn btn-default"  type='submit' value='signin'/>
+  </form>
+</div>
 
-<li><a href="/authentication/signin">Login</a></li>
-<li><a href="/authentication/signup">SignUp</a></li>
+<div class="signup">
+  <form action='/authentication/register_user' method='post'>
+    <br>
+    <br>
+    <br>
+    <br>
+    <input type='text' name='first_name' placeholder='FIRSTNAME'/><br>
+    <input type='text' name='last_name' placeholder='LASTNAME'/><br>
+    <input type='text' name='email' placeholder='EMAIL'/><br>
+    <input type='text' name='handle' placeholder='HANDLE'/><br>
+    <input type='text' name='password' placeholder='PASSWORD'/><br>
+    <input type='text' name='password_confirm' placeholder='PASSWORD'/><br>
+    <input type='text' name='bio' placeholder='USER BIO'/><br>
+    <input class="btn btn-default"  type='submit' value='sign up'/>
+  </form>
+</div>
+
