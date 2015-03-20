@@ -1,0 +1,10 @@
+<!doctype html>
+<html>
+<ul>
+  <% pictures.each do |pic| %>
+  <% pic.sub!(/public\//, '') %>
+    <li><img src="<%= "../#{pic}" %>"></li>
+    <% end %>
+</ul>
+
+<html>
