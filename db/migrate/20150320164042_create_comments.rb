@@ -5,6 +5,7 @@ class CreateComments < ActiveRecord::Migration
       t.text :content, null: false
       t.belongs_to :user
       t.belongs_to :photo
+      t.integer :parent_id
 
       t.timestamps null: false
     end

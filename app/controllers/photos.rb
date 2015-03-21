@@ -9,6 +9,7 @@ get "/photos/:id" do
 end
 
 
+
 #--------BEGIN RYAN'S CODE
 
   # TODO: Move this method to photo model
@@ -40,4 +41,4 @@ post '/photos/:id/new' do
 
   erb :'photos/new', locals: {user: user, all_tags: Tag.all}
 end
-#----------END OF RYAN'S CODE
+
