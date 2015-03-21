@@ -6,11 +6,24 @@
 <br />
 <p>This is where you input TAG info and it's added to the USER's photo collection</p>
 <p><img src="../../<%= @pic_to_add.path.sub!(/public\//, '') %>"></p>
+<br />
+<br />
 
-<%= @user.first_name %><%= @user.last_name %>
+
+<p>Welcome, <%= user.first_name %> <%= user.last_name %>. Please choose a tag for your photo.</p>
+
+  <form action="/photos/<%= user.id %>/show" method="post">
+        <select name="Tags">
+          <% all_tags.each do |tag| %>
+            <option value="<%= tag.title %>"><%= tag.title %>"</option>
+          <% end %>
+        </select>    
+        <input id="submit" type="submit" name="submit" value="Submit Tag!">
+  </form>
+
 
 <ul>
-  <% @user.photos.each do |pic| %>
+  <% user.photos.each do |pic| %>
     <li><img src="<%= "../../#{pic.url}" %>"></li>
     <% end %>
 </ul>
