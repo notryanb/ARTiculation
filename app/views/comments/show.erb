@@ -1,5 +1,6 @@
-<li>
-  <h3><%=comment.user.first_name%></h3>
+<li class="comment">
+  <% url="..#{comment.user.url}"%>
+  <div><img src="<%=url%>" height="50" width="50" /></div>
   <h3><%=comment.title%></h3>
   <p><%=comment.content%></p>
 

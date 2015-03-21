@@ -4,10 +4,20 @@
      <h2 class="title"><%= name %></h2>
      <img src="<%= "../#{picture.url}" %>" height="420" width="420">
    </div>
+   <div class="photo-tags">
+     <%picture.tags.each do |tag|%>
+       <ul>
+         <li><%=tag.title%></li>
+       </ul>
+     <%end%>
+   </div>
 
+   <%= picture.user_id==user.id%>
+
+
+  <h1 class="title comment_title">DISCUSSION</h1>
    <div class="right">
     <% if picture.comments.count > 0 %>
-      <h2 class="title">Comments:</h2>
         <% picture.comments.each do |comment|%>
           <ul>
               <% unless comment.parent_id %>
@@ -16,7 +26,7 @@
           </ul>
        <% end%>
     <% end%>
-    <button class="hidden_create_btn">Create a comment</button>
+    <button class="hidden_create_btn indent-field">Create a comment</button>
       <div class="hidden_create">
          <%= erb :"comments/new", locals: { photo_id: picture.id,parent_id: nil} %>
       </div>
