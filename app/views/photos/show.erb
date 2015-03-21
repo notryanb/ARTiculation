@@ -1,0 +1,21 @@
+<div class="container-fluid">
+   <div class="left">
+    <!-- <h1><%=picture.url%></h1> -->
+     <img src="<%=picture.url%>" height="420" width="420">
+   </div>
+   <div class="right">
+    <% if picture.comments.count > 0 %>
+      <h2>Comments:</h2>
+      <% picture.comments.each do |comment|%>
+      <ul>
+        <li>
+          <h3><%=comment.user.first_name%></h3>
+          <h3><%=comment.title%></h3>
+          <p><%=comment.content%></p>
+
+        </li>
+      </ul>
+      <% end%>
+    <% end%>
+   </div>
+</div>
