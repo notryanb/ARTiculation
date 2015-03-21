@@ -21,7 +21,7 @@
   float: left;
   display: inline-block;
 }
-.hidden_edit {
+.hidden_edit, .hidden_create {
   display: none;
 }
 
