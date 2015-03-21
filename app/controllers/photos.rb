@@ -1,4 +1,4 @@
-get "/photos/show" do
+get "/photos/:id" do
   userr = User.find_by(id: session[:user_id])
   photo = Photo.find_by(id: params[:id])
   if photo
@@ -27,17 +27,17 @@ get '/photos/:id/new' do
 end
 
 post '/photos/:id/new' do
-  # user = User.find_by(id: params[:id])
-  # all_tags = Tag.all
+  user = User.find_by(id: session[:user_id])
 
   # Write file to public/img directory for display
   File.open('public/img/' + params['file'][:filename], "w") do |f|
     f.write(params['file'][:tempfile].read)
   end
 
+  #  Get path from server once upload and create picture with correct server path
   @pic_to_add = File.open('public/img/' + params['file'][:filename])
   Photo.create(url: @pic_to_add.path.sub!(/public\//, ''), user: user)
 
-  erb :'photos/show', locals: {pictures: load_pictures, user: user, all_tags: all_tags}
+  erb :'photos/new', locals: {user: user, all_tags: Tag.all}
 end
 #----------END OF RYAN'S CODE

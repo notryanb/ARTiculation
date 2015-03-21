@@ -1,4 +1,4 @@
-.login {
+/*.login {
   display: none;
   position: absolute;
   left: 1300px;
@@ -24,13 +24,3 @@
 .hidden_edit, .hidden_create {
   display: none;
 }
-
-
-/*end*/
-
-
-
-
-
-
-
