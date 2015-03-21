@@ -26,6 +26,13 @@ natalia = User.create(email:"natalia@gmail.com",
             handle: "natawesome",
             bio: "Awesome 24/7, yo!")
 
+zack = User.create(email: "zack@gmail.com",
+                    password: "123",
+                    first_name: "Zack",
+                    last_name: "Mance",
+                    handle: "Zackawesome",
+                    bio: "You know ...")
+
 photo1 = Photo.create(url: File.join('img', '1.jpg'), user: kiran)
 photo2 = Photo.create(url: File.join('img', '2.jpg'), user: ryan)
 photo3 = Photo.create(url: File.join('img', '3.jpg'), user: angel)
@@ -58,7 +65,25 @@ photography_photo_tag = PhotoTag.create(tag: photography, photo: photo2)
 oldschool = Tag.create(title: "Old School Cool")
 oldschool_photo_tag = PhotoTag.create(tag: oldschool, photo: photo4)
 
+comment1=Comment.create(title: "Ryan's comment",
+                        content: "Wow, this photo rocks!!!! BTW, sealions rock :)))",
+                        photo_id: 2,
+                        user_id: 3)
 
+comment2 =Comment.create(title: "Kiran's comment",
+                         content: "Hey, cute photo! BTW, how do you like my beard?!!",
+                         photo_id: 3,
+                         user_id: 1)
+
+comment3 =Comment.create(title: "Natalia's comment",
+                         content: "Loving the photo!!! BTW, what I just said ?!!",
+                         photo_id: 1,
+                         user_id: 4)
+
+comment4 = Comment.create(title: "Zack's comment",
+                          content: "HEy Zings, cool project!!! BTW, everything is awesooome!!!!",
+                          photo_id: 4,
+                          user_id: 5)
 
 
 
