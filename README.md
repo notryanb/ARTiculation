@@ -14,3 +14,4 @@ The following image entails the wireframe for the project, along with the member
 
 The following image entails the git procedure for the project...
   ![alt text](/public/img/git_h.JPG "User Stories")
+hey
