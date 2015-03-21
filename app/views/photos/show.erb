@@ -1,7 +1,8 @@
 <div class="container-fluid">
    <div class="left">
-    <% url = picture.url.sub!(/public\//, "")%>
-     <img src="<%= "../#{url}" %>" height="420" width="420">
+
+     <img src="<%= "../#{picture.url}" %>" height="420" width="420">
+
    </div>
    <div class="right">
     <% if picture.comments.count > 0 %>
