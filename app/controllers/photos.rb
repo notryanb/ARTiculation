@@ -1,12 +1,12 @@
-# get "/photos/show" do
-#   userr = User.find_by(id: session[:user_id])
-#   photo = Photo.find_by(id: params[:id])
-#   if photo
-#     erb(:"photos/show", locals: {picture: photo, user: userr})
-#   else
-#     [402, "no photo with given id found"]
-#   end
-# end
+get "/photos/show" do
+  userr = User.find_by(id: session[:user_id])
+  photo = Photo.find_by(id: params[:id])
+  if photo
+    erb(:"photos/show", locals: {picture: photo, user: userr})
+  else
+    [402, "no photo with given id found"]
+  end
+end
 
 
 #--------BEGIN RYAN'S CODE
@@ -17,11 +17,11 @@ def load_pictures
 end
 
 get '/photos/:id/upload' do
-  erb :'photos/upload', locals: { user: User.find_by(id: params[:id]) }
+  erb :'photos/upload', locals: { user: User.find_by(id: session[:user_id]) }
 end
 
 get '/photos/:id/new' do
-  user = User.find_by(id: params[:id])
+  user = User.find_by(id: session[:user_id])
   all_tags = Tag.all
   erb :'photos/new', locals: {user: user, all_tags: all_tags}
 end
