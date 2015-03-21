@@ -17,9 +17,15 @@ end
 
 post '/photos/:id/new' do
   @user = User.find_by(id: params[:id])
+
+  # Write file to public/img directory for display
   File.open('public/img/' + params['file'][:filename], "w") do |f|
     f.write(params['file'][:tempfile].read)
   end
+
+  @pic_to_add = File.open('public/img/' + params['file'][:filename])
+  Photo.create(url: @pic_to_add.path.sub!(/public\//, ''), user: @user)
+
   erb :'photos/new', locals: {pictures: load_pictures}
 end
 
