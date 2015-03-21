@@ -1,7 +1,7 @@
 <div class="login">
   <% if session[:message] %>
-    <%= session[:message]%>
-    <% session[:message].clear %>
+  <%= session[:message]%>
+  <% session[:message].clear %>
   <% end %>
 
   <form action='/authentication/login' method='post'>
@@ -32,3 +32,21 @@
   </form>
 </div>
 
+<div class="photo_stream">
+  <ul>
+    <% pictures.each do |picture| %>
+    <% picture.sub!(/public\//, '')%>
+    <li>
+      <img src="<%= "../#{picture}" %>"/>
+    </li>
+    <%end%>
+  </ul>
+</div>
+
+<div class="tag_stream">
+  <ul>
+    <% tags.each do |tag| %>
+    <li><%=tag.title%></li>
+    <%end%>
+  </ul>
+</div>
