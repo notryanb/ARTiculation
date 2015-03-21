@@ -9,3 +9,28 @@
   position: absolute;
   left: 1300px;
 }
+
+/*natalia's styling*/
+
+.left, .right {
+  margin-top: 50px;
+  margin-left: 50px;
+  margin-right: 50px;
+  border: 2px solid black;
+  width: 40%;
+  float: left;
+  display: inline-block;
+}
+.hidden_edit {
+  display: none;
+}
+
+
+/*end*/
+
+
+
+
+
+
+
