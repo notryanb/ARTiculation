@@ -18,12 +18,12 @@
         <input type="hidden" name="_method" value="Delete">
         <input type="submit" class="invisible_btn" value="Delete">
       </form>
+    </div>
+  <% end %>
       <button class="hidden_create_btn">comment</button>
       <div class="hidden_create">
          <%= erb :"comments/new", locals: { photo_id: comment.photo.id, parent_id: comment.id} %>
       </div>
-    </div>
-  <% end %>
   <%if  comment.replies.count > 0%>
      <% comment.replies.each do |reply| %>
       <ul>

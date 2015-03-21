@@ -1,6 +1,5 @@
 <div class="container-fluid photo-page">
-
-   <div class="left">
+   <div class="left portrait">
     <% name="#{user.first_name} #{user.last_name}"%>
      <h2 class="title"><%= name %></h2>
      <img src="<%= "../#{picture.url}" %>" height="420" width="420">
@@ -17,6 +16,10 @@
           </ul>
        <% end%>
     <% end%>
+    <button class="hidden_create_btn">Create a comment</button>
+      <div class="hidden_create">
+         <%= erb :"comments/new", locals: { photo_id: picture.id,parent_id: nil} %>
+      </div>
   </div>
 
 </div>
