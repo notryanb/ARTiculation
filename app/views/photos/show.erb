@@ -30,7 +30,7 @@
               </form>
               <button class="hidden_create_btn">comment</button>
               <div class="hidden_create">
-                <%= erb :"comments/new", locals: {photo_id: comment.photo.id, parent_id: comment.id} %>
+                <%= erb :"comments/new", locals: {photo_id: comment.photo.id, parent_id: comment.id, photo_id: } %>
               </div>
             </div>
           <% end %>
