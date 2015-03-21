@@ -42,3 +42,10 @@ post '/photos/:id/new' do
   erb :'photos/new', locals: {user: user, all_tags: Tag.all}
 end
 
+post '/photos/:id/confirm' do
+  user = User.find_by(id: session[:user_id])
+  user.photos.last.tags << Tag.find_by_title(params[:title])
+
+  erb :'photos/confirm', locals:{ user: user }
+end
+#----------END OF RYAN'S CODE
