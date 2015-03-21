@@ -50,3 +50,22 @@
     <%end%>
   </ul>
 </div>
+
+
+<div class="row">
+  <div class="col-xs-6 col-md-3">
+      <% pictures.each do |picture| %>
+    <% picture.sub!(/public\//, '')%>
+      <img src="<%= "../#{picture}" %>" alt="..." class="thumbnail" height="200px" width="auto">
+     <%end%>
+  </div>
+  ...
+</div>
+
+<div class="container">
+<div class="page-header">
+  <% tags.each do |tag| %>
+    <li><%=tag.title%></li>
+    <%end%>
+</div>
+</div>
