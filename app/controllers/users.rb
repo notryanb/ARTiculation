@@ -3,7 +3,7 @@ get '/users/:id' do
   erb :'users/dashboard'
 end
 
-get '/users/:id/show' do
+get '/users/:id/photo' do
   photos = Photo.all.where(user_id: params[:id])
   if photos.empty?
     erb(:'users/photos_redirect')
