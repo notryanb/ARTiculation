@@ -1,11 +1,9 @@
-get '/' do
-  erb :index
-end
-
-#--------Ryan's Code
-
 def load_pictures
   Dir.glob("public/img/*.{jpg,JPG}")
+end
+
+get '/' do
+  erb :'index', locals: {pictures: load_pictures, tags: Tag.all}
 end
 
 get '/photos/new' do
@@ -20,7 +18,5 @@ post '/photos/new' do
   end
   erb :'photos/test_display', locals: {pictures: load_pictures}
 end
-
-#-------END OF RYAN'S CODE"
 
 
