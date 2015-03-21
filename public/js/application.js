@@ -12,4 +12,8 @@ $(document).ready(function() {
     $(".hidden_edit_btn").on("click", function(){
       $(".hidden_edit").show();
     });
+
+    $(".hidden_create_btn").on("click", function(){
+      $(".hidden_create").show();
+    });
 });
