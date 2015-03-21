@@ -1,0 +1,24 @@
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+<div>
+    <p>Welcome to the confirm page. Here you will make sure your tag is correct and the picture is correct.</p>
+    <p>Welcome, <%= user.first_name %> <%= user.last_name %></p>
+    
+    <br />
+    <ul>
+      <li>TAGS!</li>
+      <% user.photos.last.tags.each do |tag| %>
+      <li><%= tag.title %></li>
+      <% end %>
+    </ul>
+
+      <br />
+      <p><img src="<%= "../../#{user.photos.last.url}" %>"></p>
+
+
+</div>

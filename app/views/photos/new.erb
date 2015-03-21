@@ -6,13 +6,13 @@
 <br />
 <p>Welcome, <%= user.first_name %> <%= user.last_name %>. Please choose a tag for your photo.</p>
 
-<form action="/photos/<%= user.id %>" method="post">
-     <select>
+<form action="/photos/<%= user.id %>/confirm" method="post">
+     <select name="title">
    <% all_tags.each do |tag| %>
         <option value="<%= tag.title %>"><%= tag.title %></option>  
     <% end %>
    </select>
-<input type="submit" name="Tag!" />
+<input type="submit" name="submit" value="Tag!" />
 </form>
 
 <br />
