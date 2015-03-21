@@ -8,6 +8,7 @@ get "/photos/:id" do
   end
 end
 
+<<<<<<< HEAD
 
 #--------BEGIN RYAN'S CODE
 
@@ -41,3 +42,5 @@ post '/photos/:id/new' do
   erb :'photos/new', locals: {user: user, all_tags: Tag.all}
 end
 #----------END OF RYAN'S CODE
+=======
+>>>>>>> natalia_nesting_comments

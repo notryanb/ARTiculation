@@ -21,6 +21,18 @@
   float: left;
   display: inline-block;
 }
+
+.right {
+  height: 500px;
+}
+
+.title {
+  text-align: center;
+}
+
 .hidden_edit, .hidden_create {
   display: none;
+  margin-top: 5px;
+  margin-left: 30px;
+  margin-bottom: 5px;
 }
