@@ -14,16 +14,21 @@
 
 .left, .right {
   margin-top: 50px;
-  margin-left: 50px;
-  margin-right: 50px;
+  /*margin-left: 30px;*/
   border: 2px solid black;
-  width: 40%;
   float: left;
   display: inline-block;
 }
 
 .right {
-  height: 500px;
+  width: 52%;
+  height: 700px;
+
+}
+.left {
+  margin-left: -80px;
+  margin-right: 70px;
+  /*width: 40%;*/
 }
 
 .title {

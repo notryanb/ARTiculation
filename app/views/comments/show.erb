@@ -1,0 +1,36 @@
+<li>
+  <h3><%=comment.user.first_name%></h3>
+  <h3><%=comment.title%></h3>
+  <p><%=comment.content%></p>
+
+   <% if user.may_edit?(comment)%>
+    <div class="edit_btns">
+      <button class="hidden_edit_btn">edit</button>
+      <div class="hidden_edit">
+        <form action="/comments/<%=comment.id%>" method="POST">
+        <input type="hidden" name="_method" value="put">
+        <input type="text" name="title" placeholder="<%=comment.title%>"><br>
+        <textarea name="content" placeholder="<%=comment.content%>"></textarea><br>
+        <input type="submit" class="invisible_btn" value="update">
+        </form>
+      </div>
+      <form action="/comments/<%=comment.id%>" method="POST">
+        <input type="hidden" name="_method" value="Delete">
+        <input type="submit" class="invisible_btn" value="Delete">
+      </form>
+      <button class="hidden_create_btn">comment</button>
+      <div class="hidden_create">
+         <%= erb :"comments/new", locals: { photo_id: comment.photo.id, parent_id: comment.id} %>
+      </div>
+    </div>
+  <% end %>
+  <%if  comment.replies.count > 0%>
+     <% comment.replies.each do |reply| %>
+      <ul>
+        <%= erb :"comments/show", locals: {comment: reply, picture: picture, user: user, parent_id: comment.id} %>
+      </ul>
+     <% end %>
+  <% end %>
+
+
+</li>

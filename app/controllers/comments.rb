@@ -16,3 +16,9 @@ post "/comments" do
       [402, "you messed up"]
    end
 end
+
+delete "/comments/:id" do
+   comment =Comment.find_by(id: params[:id])
+   comment.destroy
+   redirect back
+end
