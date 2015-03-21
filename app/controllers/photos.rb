@@ -41,3 +41,4 @@ post '/photos/:id/new' do
 
   erb :'photos/new', locals: {user: user, all_tags: Tag.all}
 end
+
