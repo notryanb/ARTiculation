@@ -33,10 +33,26 @@ zack = User.create(email: "zack@gmail.com",
                     handle: "Zackawesome",
                     bio: "You know ...")
 
+anonymous = User.create(email: "anonymous@gmail.com",
+                    password: "123",
+                    first_name: "Anony",
+                    last_name: "Mouse",
+                    handle: "anonymous",
+                    bio: "You know ...")
+
 photo1 = Photo.create(url: File.join('img', '1.jpg'), user: kiran)
 photo2 = Photo.create(url: File.join('img', '2.jpg'), user: ryan)
 photo3 = Photo.create(url: File.join('img', '3.jpg'), user: angel)
 photo4 = Photo.create(url: File.join('img', '4.jpg'), user: natalia)
+photo5 = Photo.create(url: File.join('img', 'ryan.jpg'), user: ryan)
+photo6 = Photo.create(url: File.join('img', 'angel.jpg'), user: angel)
+photo7 = Photo.create(url: File.join('img', 'natalia.jpg'), user: natalia)
+photo8 = Photo.create(url: File.join('img', 'kiran.jpg'), user: kiran)
+photo9 = Photo.create(url: File.join('img', 'lil_peeps.jpg'), user: natalia)
+
+
+
+
 
 
 street = Tag.create(title: "Street art")
@@ -52,14 +68,17 @@ food_photo_tag = PhotoTag.create(tag: food, photo: photo3)
 
 fashion = Tag.create(title: "Fashion")
 fashion_photo_tag = PhotoTag.create(tag: fashion, photo: photo1)
-
+fashion_photo_tag = PhotoTag.create(tag: fashion, photo: photo9)
 
 sculpture = Tag.create(title: "Sculpture")
 sculpture_photo_tag = PhotoTag.create(tag: sculpture, photo: photo4)
 
 
 photography = Tag.create(title: "Photography")
-photography_photo_tag = PhotoTag.create(tag: photography, photo: photo2)
+photography_photo_tag = PhotoTag.create(tag: photography, photo: photo5)
+photography_photo_tag = PhotoTag.create(tag: photography, photo: photo6)
+photography_photo_tag = PhotoTag.create(tag: photography, photo: photo7)
+photography_photo_tag = PhotoTag.create(tag: photography, photo: photo8)
 
 
 oldschool = Tag.create(title: "Old School Cool")
