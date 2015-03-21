@@ -8,4 +8,12 @@ $(document).ready(function() {
     $(".signup_button").on("click", function(){
         $(".signup").show();
     });
+
+    $(".hidden_edit_btn").on("click", function(){
+      $(".hidden_edit").show();
+    });
+
+    $(".hidden_create_btn").on("click", function(){
+      $(".hidden_create").show();
+    });
 });
