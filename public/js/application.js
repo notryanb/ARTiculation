@@ -1,12 +1,11 @@
 $(document).ready(function() {
 
-    $(".login_button").on("click", function(){
-        $(".login").show();
+    $(".login_button").click(function(){
+        $(".login").toggle();
     });
 
-     $(".signup").hide();
-    $(".signup_button").on("click", function(){
-        $(".signup").show();
+     $(".signup_button").click(function(){
+        $(".signup").toggle();
     });
 
     $(".hidden_edit_btn").on("click", function(){
