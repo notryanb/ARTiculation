@@ -7,12 +7,33 @@
    <div class="photo-tags">
      <%picture.tags.each do |tag|%>
        <ul>
-         <li><%=tag.title%></li>
+         <li><h5><%=tag.title%></h5><br>
+           <%if picture.user_id==user.id%>
+             <form action="../photos/<%=picture.id%>/remove_tag" method="get">
+              <input type="hidden" name="picture_id" value="<%=picture.id%>"/>
+              <input type="hidden" name="tag_id" value="<%=tag.id%>"/>
+              <input type="submit" value="delete">
+            </form>
+           <%end%>
+         </li>
        </ul>
      <%end%>
    </div>
 
-   <%= picture.user_id==user.id%>
+   <%if picture.user_id==user.id%>
+    <form action="../photos/<%=picture.id%>/add_tag" id="add-tag" method="post">
+      <select name="title">
+        <%Tag.all.each do |tag|%>
+          <% unless picture.tags.include?(tag)%>
+              <option name="title" value="<%=tag.title%>"><%=tag.title%></option>
+          <%end%>
+        <%end%>
+      </select>
+      <input type="hidden" name="picture_id" value="<%=picture.id%>">
+      <input type="submit" value="add tag">
+    </form><br>
+
+  <%end%>
 
 
   <h1 class="title comment_title">DISCUSSION</h1>
