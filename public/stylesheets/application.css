@@ -1,12 +1,14 @@
 .login {
   display: none;
   position: absolute;
+  top:55px;
   left: 1300px;
 }
 
 .signup {
   display: none;
   position: absolute;
+  top:55px;
   left: 1300px;
 }
 

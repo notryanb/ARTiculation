@@ -1,6 +1,11 @@
 get '/' do
-  erb :'index', locals: {pictures: load_pictures, tags: Tag.all}
+  @allphotos = Photo.all
+  @tags = Tag.all
+  erb :'index'
 end
+
+
+
 
 
 

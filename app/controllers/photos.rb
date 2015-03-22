@@ -1,3 +1,13 @@
+get "/photos/:id" do
+  userr = User.find_by(id: session[:user_id])
+  photo = Photo.find_by(id: params[:id])
+  if photo
+    erb(:"photos/show", locals: {picture: photo, user: userr})
+  else
+    [402, "no photo with given id found"]
+  end
+end
+
 post "/photos/:id/add_tag" do
   tag=Tag.find_by(title: params[:title])
   picture=Photo.find_by(id: params[:picture_id])
@@ -11,17 +21,6 @@ get "/photos/:id/remove_tag" do
    picture.tags.delete(tag)
    redirect back
    # "#{tag.to_json}, #{picture.to_json}"
-end
-
-
-get "/photos/:id" do
-  userr = User.find_by(id: session[:user_id])
-  photo = Photo.find_by(id: params[:id])
-  if photo
-    erb(:"photos/show", locals: {picture: photo, user: userr})
-  else
-    [402, "no photo with given id found"]
-  end
 end
 
 
