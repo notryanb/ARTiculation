@@ -14,34 +14,60 @@
 
 /*natalia's styling*/
 
-.left, .right {
-  /*border: 2px solid black;*/
-  display: inline-block;
+.left {
+    display: inline-block;
+    margin-left: 40px;
+    width: auto;
+    height: 700px;
+    display: inline-block;
+    justify-content: center;
+    align-items:center;
+    overflow: hidden;
 }
 
+.top-picture {
+  margin-top: 70px;
+  width: 100%;
+  border: 2px solid black;
+}
+ .left img {
+   /*flex-shrink:0;*/
+   width: 90%;
+   height: auto;
+}
+.photo-tags {
+  position: relative;
+  right: 40px;
+  top: 60px;
+  float: right;
+  width: 20%;
+  /*border: 2px solid black;*/
+}
+.bottom-comments {
+  display: block;
+  border: 2px solid black;
+}
 .right {
   width: 100%;
-  height: 500px;
+  height: 300px;
   overflow: scroll;
 }
-
-.left {
-    width: 70%;
-    margin-top: 50px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-    top: 50px;
-    height: 600px;
-    justify-content:center;
-    align-items:center;
-    overflow:hidden;
+#submit {
+  border: none;
 }
-.left img {
-    flex-shrink:0;
-    min-width:100%;
-    min-height:100%
+.form-control {
+  width: 130px;
+  height: 30px;
+}
+
+.tag-body {
+  font-weight: bold;
+  font-family: cursive;
+  font-size: 20px;
+  background: grey;
+  border-bottom: 2px solid black;
+  margin-top: 2px;
+  margin-bottom: 2px;
 }
 .comment {
   margin-top: 20px;
@@ -72,11 +98,6 @@
 .indent-comment {
   position: relative;
   left: 30px;
-}
-.tag-body {
-  font-weight: bold;
-  font-family: cursive;
-  font-size: 20px;
 }
 
 /*natalia*/
