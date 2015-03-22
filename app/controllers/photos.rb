@@ -71,3 +71,35 @@ post '/photos/:id/confirm' do
   erb :'photos/confirm', locals:{ user: user }
 end
 #----------END OF RYAN'S CODE
+
+#-----------KIRANS CODE
+
+put '/photos/:id' do
+  @cur_photo = Photo.find_by(id: params[:id])
+
+  if @cur_photo
+    @cur_photo.description = params[:description]
+    @cur_photo.title = params[:title]
+
+    if @cur_photo.save
+      redirect "/"
+    else
+      [500, 'Somthing Went Wrong']
+    end
+
+  else
+    [404, "no User Profile Found"]
+  end
+
+end
+
+delete '/photos/:id' do
+  @photo = Photo.find(params[:id])
+  @photo.destroy
+  redirect back
+end
+
+
+#----------END OF KIRANS'S CODE
+
+

@@ -8,6 +8,10 @@ $(document).ready(function() {
         $(".signup").toggle();
     });
 
+     $("#edit_button").click(function(){
+        $("#edit_form").toggle();
+    });
+
     $(".hidden_edit_btn").on("click", function(){
       $(this).next(".hidden_edit").show();
     });

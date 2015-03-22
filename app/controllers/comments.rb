@@ -17,6 +17,13 @@ post "/comments" do
    end
 end
 
+put "/comments/:id" do
+  comment = Comment.find_by(id: params[:id])
+  comment.update_attribute(:title, params[:title])
+  comment.update_attribute(:content, params[:content])
+  redirect back
+end
+
 delete "/comments/:id" do
    comment =Comment.find_by(id: params[:id])
    comment.destroy
