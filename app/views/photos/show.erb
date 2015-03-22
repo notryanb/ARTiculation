@@ -3,7 +3,7 @@
     <div class="left portrait">
       <% name="#{picture.user.first_name} #{picture.user.last_name}"%>
        <h2 class="title main-title">AUTHOR: <%= name.upcase %></h2>
-       <img src="<%= "../#{picture.url}" %>" class="img-responsive" height="420" width="420">
+       <img id="picture" src="<%= "../#{picture.url}" %>" class="img-responsive" height="420" width="420">
     </div>
     <div class="container-fluid photo-tags">
       <h3 class="title tags-title">TAGS</h3>
@@ -48,7 +48,7 @@
           </ul>
        <% end%>
     <% end%>
-    <button class="hidden_create_btn no-border indent-field">Create a comment</button>
+    <button class="hidden_create_btn no-border indent-field top-create">Create a comment</button>
       <div class="hidden_create">
          <%= erb :"comments/new", locals: { photo_id: picture.id,parent_id: nil} %>
       </div>

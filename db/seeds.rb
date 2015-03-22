@@ -118,91 +118,81 @@ travel = Tag.create(title: "travel")
 travel_tag = PhotoTag.create(tag: travel, photo: photo1)
 
 sample14 = Tag.create(title: "sample14")
-sample14_tag = PhotoTag.create(tag: sample14, photo: photo1)
+sample14_tag = PhotoTag.create(tag: sample14, photo: photo2)
 
 sample15 = Tag.create(title: "sample15")
-sample15_tag = PhotoTag.create(tag: sample15, photo: photo1)
+sample15_tag = PhotoTag.create(tag: sample15, photo: photo3)
 
 sample16 = Tag.create(title: "sample16")
-sample16_tag = PhotoTag.create(tag: sample16, photo: photo1)
+sample16_tag = PhotoTag.create(tag: sample16, photo: photo4)
 
 sample17 = Tag.create(title: "sample17")
-sample17_tag = PhotoTag.create(tag: sample17, photo: photo1)
+sample17_tag = PhotoTag.create(tag: sample17, photo: photo5)
 
 sample18 = Tag.create(title: "sample18")
-sample18_tag = PhotoTag.create(tag: sample18, photo: photo1)
+sample18_tag = PhotoTag.create(tag: sample18, photo: photo6)
 
 sample19 = Tag.create(title: "sample19")
-sample19_tag = PhotoTag.create(tag: sample19, photo: photo1)
+sample19_tag = PhotoTag.create(tag: sample19, photo: photo7)
 
 sample20 = Tag.create(title: "sample20")
-sample20_tag = PhotoTag.create(tag: sample20, photo: photo1)
+sample20_tag = PhotoTag.create(tag: sample20, photo: photo8)
 
 sample21 = Tag.create(title: "sample21")
-sample21_tag = PhotoTag.create(tag: sample21, photo: photo1)
+sample21_tag = PhotoTag.create(tag: sample21, photo: photo9)
 
 sample22 = Tag.create(title: "sample22")
 sample22_tag = PhotoTag.create(tag: sample22, photo: photo1)
 
 sample23 = Tag.create(title: "sample23")
-sample23_tag = PhotoTag.create(tag: sample23, photo: photo1)
+sample23_tag = PhotoTag.create(tag: sample23, photo: photo2)
 
 sample24 = Tag.create(title: "sample24")
-sample24_tag = PhotoTag.create(tag: sample24, photo: photo1)
+sample24_tag = PhotoTag.create(tag: sample24, photo: photo3)
 
 sample25 = Tag.create(title: "sample25")
-sample25_tag = PhotoTag.create(tag: sample25, photo: photo1)
+sample25_tag = PhotoTag.create(tag: sample25, photo: photo4)
 
 sample26 = Tag.create(title: "sample26")
-sample26_tag = PhotoTag.create(tag: sample26, photo: photo1)
+sample26_tag = PhotoTag.create(tag: sample26, photo: photo5)
 
 sample27 = Tag.create(title: "sample27")
-sample27_tag = PhotoTag.create(tag: sample27, photo: photo1)
+sample27_tag = PhotoTag.create(tag: sample27, photo: photo6)
 
 sample28 = Tag.create(title: "sample28")
-sample28_tag = PhotoTag.create(tag: sample28, photo: photo1)
+sample28_tag = PhotoTag.create(tag: sample28, photo: photo7)
 
 sample29 = Tag.create(title: "sample29")
-sample29_tag = PhotoTag.create(tag: sample29, photo: photo1)
+sample29_tag = PhotoTag.create(tag: sample29, photo: photo8)
 
 sample30 = Tag.create(title: "sample30")
-sample30_tag = PhotoTag.create(tag: sample30, photo: photo1)
+sample30_tag = PhotoTag.create(tag: sample30, photo: photo9)
 
-sample31 = Tag.create(title: "sample31")
-sample31_tag = PhotoTag.create(tag: sample31, photo: photo1)
 
 sample32 = Tag.create(title: "sample32")
-sample32_tag = PhotoTag.create(tag: sample32, photo: photo1)
+sample32_tag = PhotoTag.create(tag: sample32, photo: photo2)
 
 sample33 = Tag.create(title: "sample33")
-sample33_tag = PhotoTag.create(tag: sample33, photo: photo1)
+sample33_tag = PhotoTag.create(tag: sample33, photo: photo3)
 
 sample34 = Tag.create(title: "sample34")
-sample34_tag = PhotoTag.create(tag: sample34, photo: photo1)
+sample34_tag = PhotoTag.create(tag: sample34, photo: photo4)
 
 sample35 = Tag.create(title: "sample35")
-sample35_tag = PhotoTag.create(tag: sample35, photo: photo1)
+sample35_tag = PhotoTag.create(tag: sample35, photo: photo5)
 
 sample36 = Tag.create(title: "sample36")
-sample36_tag = PhotoTag.create(tag: sample36, photo: photo1)
+sample36_tag = PhotoTag.create(tag: sample36, photo: photo6)
 
 sample37 = Tag.create(title: "sample37")
-sample37_tag = PhotoTag.create(tag: sample37, photo: photo1)
+sample37_tag = PhotoTag.create(tag: sample37, photo: photo7)
 
 sample38 = Tag.create(title: "sample38")
-sample38_tag = PhotoTag.create(tag: sample38, photo: photo1)
+sample38_tag = PhotoTag.create(tag: sample38, photo: photo8)
 
 sample39 = Tag.create(title: "sample39")
-sample39_tag = PhotoTag.create(tag: sample39, photo: photo1)
+sample39_tag = PhotoTag.create(tag: sample39, photo: photo9)
 
-sample40 = Tag.create(title: "sample40")
-sample40_tag = PhotoTag.create(tag: sample40, photo: photo1)
-
-sample41 = Tag.create(title: "sample41")
-sample41_tag = PhotoTag.create(tag: sample41, photo: photo1)
-
-sample42 = Tag.create(title: "sample42")
-sample42_tag = PhotoTag.create(tag: sample42, photo: photo1)
 
 photography = Tag.create(title: "Photography")
 photography_photo_tag = PhotoTag.create(tag: photography, photo: photo5)

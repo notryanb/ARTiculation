@@ -1,13 +1,13 @@
 <li class="comment">
-  <% url="..#{comment.user.url}"%>
-  <div><img src="<%=url%>" height="60" width="60" /></div>
-  <h3><%=comment.title%></h3>
-  <p><%=comment.content%></p>
+  <% url="../#{comment.user.url}"%>
+  <div><img id="avatar" src="<%=url%>" height="80" width="80" /></div>
+  <h3 class="comment-t"><%=comment.title%></h3>
+  <p class="comment-content"><%=comment.content%></p>
 
    <% if user.may_edit?(comment)%>
     <div class="edit_btns">
       <button class=" no-border hidden_edit_btn">edit</button>
-      <div class="hidden_edit">
+      <div class="hidden_edit"><br><br>
         <form class="form-horizontal" action="/comments/<%=comment.id%>" method="POST">
           <input type="hidden" name="_method" value="put">
             <input class="form-control" type="text" name="title" placeholder="<%=comment.title%>"><br>
@@ -23,7 +23,7 @@
     </div>
   <% end %>
       <button class="hidden_create_btn no-border">comment</button>
-      <div class="hidden_create">
+      <div class="hidden_create"><br>
          <%= erb :"comments/new", locals: { photo_id: comment.photo.id, parent_id: comment.id} %>
       </div>
   <%if  comment.replies.count > 0%>
