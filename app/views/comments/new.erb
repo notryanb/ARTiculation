@@ -1,7 +1,7 @@
 <div>
   <form class="indent-form" action="/comments" method="POST">
     <input class="indent-field" type="text" name="title" placeholder="title"><br>
-    <textarea name="content" placeholder="content"></textarea><br>
+    <textarea name="content" rows="10" cols="40" placeholder="content"></textarea><br>
     <input class="indent-field" type="hidden" name="parent_id" value="<%=parent_id%>">
     <input type="hidden" name="photo_id" value="<%=photo_id%>">
     <input class="indent-field" type="submit" class="invisible_btn" value="create">
