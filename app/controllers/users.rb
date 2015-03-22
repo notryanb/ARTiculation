@@ -1,5 +1,6 @@
 get '/users/:id' do
   @user = User.find(params[:id])
+  @user_photos = Photo.all.where(user_id: params[:id])
   erb :'users/dashboard'
 end
 
