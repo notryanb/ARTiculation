@@ -2,7 +2,7 @@ kiran = User.create(email:"kiran@gmail.com",
             password:"123",
             first_name: "Kiran",
             last_name:"C",
-            url: File.join('/', 'img', 'kiran.jpg'),
+            url: File.join('img', 'kiran.jpg'),
             handle: "kirawesome",
             bio: "I like to refer to myself as the a Street Art Rockstar, I find pleasure in walking around NYC and treasure hunting street art in different neighbourhoods. I think Street Art in NYC really tells a story about the neighbourhood, I also greatful to be living in the greatest city in the world.")
 
@@ -10,7 +10,7 @@ ryan = User.create(email:"ryan@gmail.com",
             password:"123",
             first_name: "Ryan",
             last_name:"B",
-            url: File.join('/', 'img', 'ryan.jpg'),
+            url: File.join('img', 'ryan.jpg'),
             handle: "ryawesome",
             bio: "Awesome 12/7, yo!")
 
@@ -18,7 +18,7 @@ angel = User.create(email:"angel@gmail.com",
             password:"123",
             first_name: "Angel",
             last_name:"B",
-            url: File.join('/', 'img', 'angel.jpg'),
+            url: File.join('img', 'angel.jpg'),
             handle: "awesomangel",
             bio: "Whatever")
 
@@ -26,7 +26,7 @@ natalia = User.create(email:"natalia@gmail.com",
             password:"123",
             first_name: "Natalia",
             last_name:"B",
-            url: File.join('/', 'img', 'natalia.jpg'),
+            url: File.join('img', 'natalia.jpg'),
             handle: "natawesome",
             bio: "Awesome 24/7, yo!")
 
@@ -34,7 +34,7 @@ zack = User.create(email: "zack@gmail.com",
                     password: "123",
                     first_name: "Zack",
                     last_name: "Mance",
-                    url: File.join('/', 'img', 'ryan.jpg'),
+                    url: File.join('img', 'ryan.jpg'),
                     handle: "Zackawesome",
                     bio: "You know ...")
 
@@ -42,7 +42,7 @@ anonymous = User.create(email: "anonymous@gmail.com",
                     password: "123",
                     first_name: "Anony",
                     last_name: "Mouse",
-                    url: File.join('/', 'img', 'ryan.jpg'),
+                    url: File.join('img', 'ryan.jpg'),
                     handle: "anonymous",
                     bio: "You know ...")
 
@@ -55,11 +55,6 @@ photo6 = Photo.create(url: File.join('img', 'angel.jpg'), user: angel)
 photo7 = Photo.create(url: File.join('img', 'natalia.jpg'), user: natalia)
 photo8 = Photo.create(url: File.join('img', 'kiran.jpg'), user: kiran)
 photo9 = Photo.create(url: File.join('img', 'lil_peeps.jpg'), user: natalia)
-
-
-
-
-
 
 street = Tag.create(title: "Street art")
 street_photo_tag = PhotoTag.create(tag: street, photo: photo1)

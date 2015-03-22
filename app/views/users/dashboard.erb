@@ -4,7 +4,7 @@
           <a href="#" class="follow_btn hidden-xs">Follow</a>
     </div>
         <div class="col-md-8  col-xs-12">
-           <img src="<%= @user.url%>" class="img-thumbnail picture hidden-xs" />
+           <img src="../../<%=@user.url%>" class="img-thumbnail picture hidden-xs" />
            <div class="header">
                 <h1><%= @user.handle %></h1>
                 <h4><%= @user.first_name %> <%= @user.last_name %></h4>
@@ -12,4 +12,15 @@
            </div>
         </div>
     </div>
+</div>
+
+
+<div class="row">
+  <div class="col-xs-6 col-md-3">
+    <% @user_photos.each do |photo| %>
+    <a href="#" class="thumbnail">
+      <img src="../../<%=photo.url%>">
+    </a>
+    <% end %>
+  </div>
 </div>
