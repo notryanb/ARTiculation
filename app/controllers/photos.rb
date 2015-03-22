@@ -30,14 +30,21 @@ end
 post '/photos/:id/new' do
   user = User.find_by(id: session[:user_id])
 
-  # Write file to public/img directory for display
-  File.open('public/img/' + params['file'][:filename], "w") do |f|
-    f.write(params['file'][:tempfile].read)
-  end
+  external_url = params[:url]
 
-  #  Get path from server once upload and create picture with correct server path
-  @pic_to_add = File.open('public/img/' + params['file'][:filename])
-  Photo.create(url: @pic_to_add.path.sub!(/public\//, ''), user: user)
+  if external_url != nil
+    Photo.create(url: external_url, user: user)
+  else
+    p "this shouldn't be printing with an external URL"
+    # Write file to public/img directory for display
+    File.open('public/img/' + params['file'][:filename], "w") do |f|
+      f.write(params['file'][:tempfile].read)
+    end
+
+    #  Get path from server once upload and create picture with correct server path
+    @pic_to_add = File.open('public/img/' + params['file'][:filename])
+    Photo.create(url: @pic_to_add.path.sub!(/public\//, 'http://localhost:9393/'), user: user)
+  end
 
   erb :'photos/new', locals: {user: user, all_tags: Tag.all}
 end

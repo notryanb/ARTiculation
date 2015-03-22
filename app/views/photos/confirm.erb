@@ -6,8 +6,8 @@
 <br />
 
 <div>
-    <p>Welcome to the confirm page. Here you will make sure your tag is correct and the picture is correct.</p>
     <p>Welcome, <%= user.first_name %> <%= user.last_name %></p>
+    <p>If you are satisfied, click <a href="../../users/<%= user.id %>">HERE</a>.
     
     <br />
     <ul>
@@ -18,7 +18,7 @@
     </ul>
 
       <br />
-      <p><img src="<%= "../../#{user.photos.last.url}" %>"></p>
+      <p><img src="<%= user.photos.last.url %>"></p>
 
 
 </div>
