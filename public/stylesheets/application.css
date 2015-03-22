@@ -14,11 +14,17 @@
 
 /*natalia's styling*/
 
+.main-title {
+  font-size: 50px;
+  font-family: futura;
+  font-weight: bold;
+  color: brown;
+}
 .left {
     display: inline-block;
     margin-left: 40px;
     width: auto;
-    height: 700px;
+    height: 800px;
     display: inline-block;
     justify-content: center;
     align-items:center;
@@ -31,7 +37,7 @@
   border: 2px solid black;
 }
  .left img {
-   /*flex-shrink:0;*/
+   flex-shrink:0;
    width: 90%;
    height: auto;
 }
@@ -81,12 +87,14 @@
 }
 
 .hidden_edit, .hidden_create {
+  position: relative;
+  top: -120px;
   display: none;
   margin-top: -25px;
-  margin-left: 30px;
+  margin-left: 90px;
   margin-bottom: 5px;
   background-color: pink;
-  width: 60%;
+  width: 50%;
 }
 .indent-form {
   margin: 10px;
@@ -95,9 +103,21 @@
   margin: 5px;
 }
 
+ul
+{
+list-style-type: none;
+}
+
 .indent-comment {
   position: relative;
   left: 30px;
+}
+.no-border {
+  border: none;
+  background: none;
+  color: red;
+  font-size: 20px;
+  font-family: cursive;
 }
 
 /*natalia*/

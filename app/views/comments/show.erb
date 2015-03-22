@@ -6,22 +6,23 @@
 
    <% if user.may_edit?(comment)%>
     <div class="edit_btns">
-      <button class="hidden_edit_btn">edit</button>
+      <button class=" no-border hidden_edit_btn">edit</button>
       <div class="hidden_edit">
-        <form action="/comments/<%=comment.id%>" method="POST">
-        <input type="hidden" name="_method" value="put">
-        <input type="text" name="title" placeholder="<%=comment.title%>"><br>
-        <textarea name="content" placeholder="<%=comment.content%>"></textarea><br>
-        <input type="submit" class="invisible_btn" value="update">
+        <form class="form-horizontal" action="/comments/<%=comment.id%>" method="POST">
+          <input type="hidden" name="_method" value="put">
+            <input class="form-control" type="text" name="title" placeholder="<%=comment.title%>"><br>
+            <textarea  name="content" rows="5" cols="35" placeholder="<%=comment.content.upcase%>"></textarea>
+          <!-- </div> -->
+          <input class="no-border" type="submit" class="invisible_btn" value="update">
         </form>
       </div>
       <form action="/comments/<%=comment.id%>" method="POST">
         <input type="hidden" name="_method" value="Delete">
-        <input type="submit" class="invisible_btn" value="Delete">
+        <input type="submit" class="no-border invisible_btn" value="Delete">
       </form>
     </div>
   <% end %>
-      <button class="hidden_create_btn">comment</button>
+      <button class="hidden_create_btn no-border">comment</button>
       <div class="hidden_create">
          <%= erb :"comments/new", locals: { photo_id: comment.photo.id, parent_id: comment.id} %>
       </div>
