@@ -32,7 +32,7 @@
       <div class="row-fluid">
         <div class="col-md-2">
           <% @tags.each do |tag| %>
-          <a href="" >
+          <a href="/tags/<%= tag.id %>" >
             <%= tag.title %>
           </a>
           <% end %>
