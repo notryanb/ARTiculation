@@ -85,6 +85,7 @@ photography_photo_tag = PhotoTag.create(tag: photography, photo: photo8)
 oldschool = Tag.create(title: "Old School Cool")
 oldschool_photo_tag = PhotoTag.create(tag: oldschool, photo: photo4)
 
+
 comment1=Comment.create(title: "Ryan's comment",
                         content: "Wow, this photo rocks!!!! BTW, sealions rock :)))",
                         photo_id: 2,
