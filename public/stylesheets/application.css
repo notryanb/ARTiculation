@@ -12,6 +12,10 @@
   left: 1300px;
 }
 
+#edit_form {
+  display: none;
+}
+
 /*natalia's styling*/
 
 .main-title {
