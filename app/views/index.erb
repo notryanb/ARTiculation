@@ -38,23 +38,27 @@
           <% end %>
         </div>
 
-        <div class="col-md-9">
+        <div class="row">
+          <% if current_user %>
+          <% @allphotos.each do |photo| %>
           <div class="col-xs-6 col-md-3">
-            <% if current_user %>
-              <% @allphotos.each do |photo| %>
-              <a href="/photos/<%= photo.id %>" class="thumbnail">
-                <img src="../../<%=photo.url%>">
-              </a>
-              <% end %>
-            <% else %>
-            <% @allphotos.each do |photo| %>
-            <a href="/authentication/signup" class="thumbnail">
-              <img src="../../<%=photo.url%>">
+            <a href="/photos/<%= photo.id %>">
+              <img src="../../<%=photo.url%>" style="height: 200px">
             </a>
-            <% end %>
-            <% end %>
           </div>
+          <% end %>
+          <% else %>
+          <% @allphotos.each do |photo| %>
+          <div class="col-xs-6 col-md-3">
+            <a href="/authentication/signup">
+              <img src="../../<%=photo.url%>" style="height: 200px">
+            </a>
+          </div>
+          <% end %>
+          <% end %>
         </div>
+
+
       </div>
     </div>
   </div>
