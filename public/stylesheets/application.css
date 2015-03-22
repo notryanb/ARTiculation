@@ -69,6 +69,16 @@
   margin: 5px;
 }
 
+.indent-comment {
+  position: relative;
+  left: 30px;
+}
+.tag-body {
+  font-weight: bold;
+  font-family: cursive;
+  font-size: 20px;
+}
+
 /*natalia*/
 *{
     font-family: 'Open Sans', sans-serif;

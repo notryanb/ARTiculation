@@ -27,8 +27,8 @@
       </div>
   <%if  comment.replies.count > 0%>
      <% comment.replies.each do |reply| %>
-      <ul>
-        <%= erb :"comments/show", locals: {comment: reply, picture: picture, user: user, parent_id: comment.id} %>
+      <ul><div class="indent-comment">
+        <%= erb :"comments/show", locals: {comment: reply, picture: picture, user: user, parent_id: comment.id} %></div>
       </ul>
      <% end %>
   <% end %>

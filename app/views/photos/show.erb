@@ -7,7 +7,7 @@
    <div class="photo-tags">
      <%picture.tags.each do |tag|%>
        <ul>
-         <li><h5><%=tag.title%></h5><br>
+         <li><p class="tag-body"><%=tag.title%></p><br>
            <%if picture.user_id==user.id%>
              <form action="../photos/<%=picture.id%>/remove_tag" method="get">
               <input type="hidden" name="picture_id" value="<%=picture.id%>"/>
