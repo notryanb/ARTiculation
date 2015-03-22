@@ -1,0 +1,11 @@
+<div class="container" style="margin-top: 55px; margin-bottom: 20px;">
+<div class="row">
+  <div class="col-xs-6 col-md-3">
+    <% @tagphotos.each do |photo| %>
+    <a href="/photos/<%= photo.id %>" class="thumbnail">
+        <img src="../../<%=photo.url%>">
+    </a>
+    <% end %>
+  </div>
+</div>
+</div>
