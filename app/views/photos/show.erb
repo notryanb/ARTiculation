@@ -5,16 +5,16 @@
        <h2 class="title main-title">AUTHOR: <%= name.upcase %></h2>
        <img src="<%= "../#{picture.url}" %>" class="img-responsive" height="420" width="420">
     </div>
-    <div class=" container-fluid photo-tags">
-      <h3 class="title">TAGS</h3>
+    <div class="container-fluid photo-tags">
+      <h3 class="title tags-title">TAGS</h3>
        <%picture.tags.each do |tag|%>
          <ul>
            <li><p class="tag-body"><%=tag.title%></p><br>
              <%if picture.user_id==user.id%>
-               <form action="../photos/<%=picture.id%>/remove_tag" method="get">
+               <form class="delete-form" action="../photos/<%=picture.id%>/remove_tag" method="get">
                 <input type="hidden" name="picture_id" value="<%=picture.id%>"/>
                 <input type="hidden" name="tag_id" value="<%=tag.id%>"/>
-                <input type="submit" value="delete">
+                <input class="no-border" type="submit" value="delete">
               </form>
              <%end%>
            </li>
@@ -22,7 +22,7 @@
       <%end%>
      <%if picture.user_id==user.id%>
         <form class="add-tag-form" action="../photos/<%=picture.id%>/add_tag" id="add-tag" method="post">
-        <input type="submit" value="add tag">
+        <input class="no-border add-tag-btn" type="submit" value="Add tag">
         <select class="form-control" name="title">
           <%Tag.all.each do |tag|%>
             <% unless picture.tags.include?(tag)%>
