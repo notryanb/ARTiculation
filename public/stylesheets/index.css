@@ -1,0 +1,112 @@
+div: {
+  display: block;
+}
+
+.photo_container {
+border-bottom: 1px solid #eeeff2;
+background: #f7f8fa;
+padding-bottom: 65px;
+}
+
+
+.photo_container .photo_grid {
+padding: 35px 10px 50px 10px;
+margin: 0 auto;
+max-width: 1200px;
+}
+
+.photo_grid {
+min-height: 100vh;
+}
+
+.photo_thumbnail.loaded .style {
+  padding-top: 50px;
+
+
+}
+
+ #row1{
+  /*padding-top: 50px;*/
+  margin: 5px;
+  position: relative;
+  display: inline;
+  width: 399px;
+  height: 336px;
+
+}
+
+#row2 {
+  margin: 5px;
+  position: relative;
+  display: inline;
+  width: auto;
+  height:250px;
+  left: 150px;
+  /*top: 100px;*/
+}
+
+#row3 {
+  margin: 5px;
+  position: relative;
+  display: inline;
+  width: auto;
+  height:250px;
+  left: 20px;
+  top: -60px;
+}
+
+
+
+.photo_container .photo_grid .row .photo_thumbnail .photo.loaded {
+  display: inline-block;
+opacity: 1;
+transition: opacity 0.2s;
+  }
+
+.photo_thumbnail .photo {
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+cursor: pointer;
+}
+.photo_thumbnail.loaded {
+-webkit-background-clip: border-box;
+-webkit-background-origin: padding-box;
+-webkit-background-size: cover;
+-webkit-font-smoothing: antialiased;
+-webkit-transition-delay: 0s;
+-webkit-transition-duration: 0.2s;
+-webkit-transition-property: opacity;
+-webkit-transition-timing-function: ease;
+background-attachment: scroll;
+background-clip: border-box;
+background-color: rgb(204, 204, 204);
+background-origin: padding-box;
+background-position: 50% 50%;
+background-size: cover;
+bottom: 0px;
+box-sizing: border-box;
+color: rgb(85, 26, 139);
+cursor: pointer;
+display: block;
+font-family: 'Helvetica Neue', HelveticaNeue, Helvetica, TeXGyreHeros, FreeSans, 'Nimbus Sans L', 'Liberation Sans', Arial, sans-serif;
+font-size: 14px;
+height: 386px;
+left: 0px;
+opacity: 1;
+outline-color: rgb(85, 26, 139);
+outline-style: none;
+outline-width: 0px;
+position: absolute;
+right: 0px;
+text-align: center;
+text-decoration: none;
+top: 0px;
+transition-delay: 0s;
+transition-duration: 0.2s;
+transition-property: opacity;
+transition-timing-function: ease;
+width: 579px;
+}
