@@ -77,6 +77,17 @@ sculpture_photo_tag = PhotoTag.create(tag: sculpture, photo: photo4)
 nature = Tag.create(title: "nature")
 nature_tag = PhotoTag.create(tag: nature, photo: photo1)
 
+photo10 = Photo.create(url: File.join('img', 'brainstr.jpg'), title: "Brainstorm", description: "This is the glorious picture of little peeps", user: zack)
+photo11 = Photo.create(url: File.join('img', 'IMG_3491.jpg'), title: "IMG!", description: "This is the glorious picture of little peeps", user: natalia)
+photo12 = Photo.create(url: File.join('img', 'graffiti_alphabet_balboa.jpg'), title: "Balboa", description: "This is the glorious picture of little peeps", user: ryan)
+
+photo13 = Photo.create(url: File.join('img', 'calvin.jpg'), title: "Calvin", description: "This is the glorious picture of little peeps", user: natalia)
+photo14 = Photo.create(url: File.join('img', 'sluggo.jpg'), title: "The Little Peeps", description: "This is the glorious picture of little peeps", user: kiran)
+photo15 = Photo.create(url: File.join('img', 'sao-paulo-graffiti-villa-magdalena-r-cardeal-arcoverde-frankenstein-top-hat-big-nose-large.jpg'), title: "Frankenstein", description: "This is the glorious picture of little peeps", user: ryan)
+photo14 = Photo.create(url: File.join('img', 'small_star_wars_street_art.jpg'), title: "Star Wars", description: "This is the glorious picture of little peeps", user: angel)
+
+
+
 weather = Tag.create(title: "weather")
 weather_tag = PhotoTag.create(tag: weather, photo: photo1)
 weather_tag = PhotoTag.create(tag: weather, photo: photo2)
