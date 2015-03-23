@@ -28,13 +28,13 @@ natalia = User.create(email:"natalia@gmail.com",
             last_name:"B",
             url: File.join('img', 'natalia.jpg'),
             handle: "natawesome",
-            bio: "Awesome 24/7, yo!")
+            bio: "I like art in most of it forms, but I think street art is the most honest of all. I am glad to work on project that blends two my big pssions: art and programming.")
 
 zack = User.create(email: "zack@gmail.com",
                     password: "123",
                     first_name: "Zack",
                     last_name: "Mance",
-                    url: File.join('img', 'ryan.jpg'),
+                    url: File.join('img', 'calvin.jpg'),
                     handle: "Zackawesome",
                     bio: "You know ...")
 
@@ -221,7 +221,7 @@ comment3 =Comment.create(title: "Natalia's comment",
                          user_id: 4)
 
 comment4 = Comment.create(title: "Zack's comment",
-                          content: "HEy Zings, cool project!!! BTW, everything is awesooome!!!!",
+                          content: "HEy Yinz, cool project!!! BTW, everything is awesooome!!!!",
                           photo_id: 4,
                           user_id: 5)
 
