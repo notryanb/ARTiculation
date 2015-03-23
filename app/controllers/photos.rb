@@ -50,7 +50,10 @@ post '/photos/:id/new' do
   description = params[:description]
 
   if external_url != nil
-    Photo.create(url: external_url, user: user)
+    Photo.create(url: external_url, 
+                title: title, 
+                description: description,
+                user: user)
   else
     p "this shouldn't be printing with an external URL"
     # Write file to public/img directory for display
